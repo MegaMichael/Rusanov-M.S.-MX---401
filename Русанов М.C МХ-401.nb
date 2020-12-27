@@ -1,0 +1,150 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5453,        142]
+NotebookOptionsPosition[      4967,        125]
+NotebookOutlinePosition[      5371,        141]
+CellTagsIndexPosition[      5328,        138]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"x_", ",", "a_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"x", "^", "3"}], "+", 
+   RowBox[{"3", 
+    RowBox[{"x", "^", "2"}]}], "+", "x", "-", "a"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"points", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", ",", "0"}], "}"}], "/.", 
+      RowBox[{"Solve", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"f", "[", 
+          RowBox[{"x", ",", "a"}], "]"}], "\[Equal]", "0"}], ",", "x"}], 
+       "]"}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"TableForm", "@", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"points", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "1"}], "]"}], "]"}], "}"}], ",", 
+       RowBox[{"Plot", "[", 
+        RowBox[{
+         RowBox[{"f", "[", 
+          RowBox[{"x", ",", "a"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", 
+           RowBox[{"-", "3"}], ",", "1"}], "}"}], ",", 
+         RowBox[{"Epilog", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"PointSize", "[", "0.015", "]"}], ",", "Red", ",", 
+            RowBox[{"Point", "[", "points", "]"}]}], "}"}]}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", "4"}], ",", 
+         RowBox[{"ImageSize", "\[Rule]", "500"}]}], "]"}]}], "}"}]}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "0", ",", "1"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.817952093161563*^9, 3.8179523150638065`*^9}, {
+   3.817952363553406*^9, 3.8179523768527527`*^9}, 3.8179524569236245`*^9, {
+   3.8179525143791857`*^9, 3.817952514500963*^9}, {3.8179525450952187`*^9, 
+   3.817952594292577*^9}, {3.817952624386449*^9, 3.817952627836691*^9}, {
+   3.817952704484106*^9, 3.817952713584838*^9}, 3.8179527454231243`*^9, {
+   3.817952800281905*^9, 3.8179528736114564`*^9}, {3.8179529056944056`*^9, 
+   3.8179530807158394`*^9}, {3.8179531380695744`*^9, 3.817953147208513*^9}},
+ CellLabel->"",ExpressionUUID->"43ec70c8-f8b9-45bd-b92e-a0722fac3c59"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 1., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`a$$], 0, 1}}, Typeset`size$$ = {500., {179.5, 185.5}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`a$$ = 0}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`points = ReplaceAll[{$CellContext`x, 0}, 
+          
+          Solve[$CellContext`x^3 + 
+            3 $CellContext`x^2 + $CellContext`x - $CellContext`a$$ == 
+           0, $CellContext`x]]; TableForm[{{
+           Part[$CellContext`points, All, 1]}, 
+          
+          Plot[$CellContext`x^3 + 
+           3 $CellContext`x^2 + $CellContext`x - $CellContext`a$$, \
+{$CellContext`x, -3, 1}, Epilog -> {
+             PointSize[0.015], Red, 
+             Point[$CellContext`points]}, PlotRange -> 4, ImageSize -> 
+           500]}]), "Specifications" :> {{$CellContext`a$$, 0, 1}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{551., {227., 233.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.817952458861058*^9, 3.8179525187256784`*^9, {3.817952549761777*^9, 
+   3.817952596585117*^9}, 3.817952629337616*^9, 3.8179527143339643`*^9, 
+   3.817952747230215*^9, 3.8179528121825275`*^9, {3.8179528619894204`*^9, 
+   3.8179528782022142`*^9}},
+ CellLabel->"Out[86]=",ExpressionUUID->"944816d9-d101-4922-87f6-2e7861eb0e45"]
+}, Open  ]]
+},
+WindowSize->{1024, 581},
+WindowMargins->{{Automatic, -70}, {43, Automatic}},
+FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8f671ba3-366b-4baa-97e0-02299eb67f71"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2077, 51, 138, "Input",ExpressionUUID->"43ec70c8-f8b9-45bd-b92e-a0722fac3c59"],
+Cell[2660, 75, 2291, 47, 500, "Output",ExpressionUUID->"944816d9-d101-4922-87f6-2e7861eb0e45"]
+}, Open  ]]
+}
+]
+*)
+
